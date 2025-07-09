@@ -32,4 +32,11 @@ public class Student {
   public boolean isActivate() {
     return activated;
   }
+
+  public void updateActivated(boolean isActivated) {
+    if (this.activated == isActivated) {
+      throw new RuntimeException("같은 활성 상태로 변경할 수 없습니다.");
+    }
+    this.activated = isActivated;
+  }
 }

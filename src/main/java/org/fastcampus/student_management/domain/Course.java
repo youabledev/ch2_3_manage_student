@@ -19,6 +19,10 @@ public class Course {
     this.courseTime = courseTime;
   }
 
+  public Course changeFee(Fee fee) {
+    return new Course(this.student, this.courseName, fee.getFee(), this.dayOfWeek, this.courseTime);
+  }
+
   public String getCourseName() {
     return courseName;
   }
